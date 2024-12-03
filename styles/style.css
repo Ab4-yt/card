@@ -89,7 +89,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("https://wallpaperaccess.com/full/3053365.jpg");
+  background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/f4b51e98-0b23-4e87-a2cf-bb41ec0b34f0-profile_banner-480.png");
   background-repeat: no-repeat;
   z-index: -1;
   filter: blur(5px);
@@ -618,7 +618,7 @@ body {
 
 @media (width <=640px) {
   .container::before {
-    background-image: url("https://wallpaperaccess.com/full/3053365.jpg");
+    background-image: url("https://static-cdn.jtvnw.net/jtv_user_pictures/f4b51e98-0b23-4e87-a2cf-bb41ec0b34f0-profile_banner-480.png");
     margin: -2px;
     filter: blur(2px);
     background-color: rgba(0, 0, 0, 0.5);
