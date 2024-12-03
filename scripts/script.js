@@ -104,10 +104,10 @@ function updateStatus(lanyardData) {
 	const emoji = activities[0]?.emoji;
 	if (emoji?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusEmoji.src = `https://cdn.discordapp.com/emojis/811400292494737441?format=webp&size=24&quality=lossless`;
+		elements.customStatusEmoji.src = `https://zennexq-discord.github.io/card/1177729458141155369.webp`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
-		elements.customStatusEmoji.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
+		elements.customStatusEmoji.src = "https://zennexq-discord.github.io/card/1177729458141155369.webp";
 	} else {
 		elements.customStatusEmoji.style.display = "none";
 	}
