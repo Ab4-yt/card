@@ -104,10 +104,10 @@ function updateStatus(lanyardData) {
 	const emoji = activities[0]?.application_id;
 	if (application?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application.id}/1061407057821053020.png`;
+		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application-id}/1061407057821053020.png`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
-		elements.customStatusEmoji.src = "https://cdn.discordapp.com/app-assets/${application.id}/1061407057821053020.png";
+		elements.customStatusEmoji.src = "https://cdn.discordapp.com/app-assets/${application-id}/1061407057821053020.png";
 	} else {
 		elements.customStatusEmoji.style.display = "none";
 	}
