@@ -101,10 +101,8 @@ function updateStatus(lanyardData) {
 	}
 
 	// Kiểm tra emoji
-	const emoji = activities[0]?.application_id;
-	if (a?.id) {
-		const emoji = activities[0]?.small_image;
-	if (emojiimg?.id)
+	const emoji = activities[0]?.emoji;
+	if (emoji?.id) {
 		// Sử dụng emoji có ID
 		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/1005469189907173486/1025422070600978553.png`;
 	} else if (emoji?.name) {
