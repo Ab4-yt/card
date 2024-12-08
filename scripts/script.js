@@ -7,7 +7,7 @@ const elements = {
 	username: document.querySelector(".username"),
 	customStatus: document.querySelector(".custom-status"),
 	customStatusText: document.querySelector(".custom-status-text"),
-	customStatusEmoji: document.getElementById("custom-status-emoji"),
+	application_id: document.getElementById("custom-status-emoji"),
 };
 
 // Kết nối WebSocket với Lanyard API
@@ -101,13 +101,13 @@ function updateStatus(lanyardData) {
 	}
 
 	// Kiểm tra emoji
-	const emoji = activities[0]?.emoji;
-	if (emoji?.id) {
+	const emoji = activities[0]?.application_id;
+	if (application?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusEmoji.src = `https://zennexq-discord.github.io/card/1177729458141155369.webp`;
+		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application.id}1025422070600978553.png`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
-		elements.customStatusEmoji.src = "https://zennexq-discord.github.io/card/1177729458141155369.webp";
+		elements.customStatusEmoji.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
 	} else {
 		elements.customStatusEmoji.style.display = "none";
 	}
