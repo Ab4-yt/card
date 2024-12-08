@@ -107,7 +107,7 @@ function updateStatus(lanyardData) {
 		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application-id}1025422070600978553.png`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
-		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application-id}1025422070600978553.png`;
+		elements.customStatusEmoji.src = "https://cdn.discordapp.com/app-assets/${application-id}1025422070600978553.png";
 	} else {
 		elements.customStatusEmoji.style.display = "none";
 	}
