@@ -95,7 +95,7 @@ function updateStatus(lanyardData) {
 	elements.statusBox.setAttribute("aria-label", label);
 
 	// Cập nhật custom status
-	if (activities[0]?.details) {
+	if (activities[0]?.name) {
 		elements.customStatusText.innerHTML = activities[0].name;
 	} else {
 		elements.customStatusText.innerHTML = "Not Playing Anything Rate Now ";
