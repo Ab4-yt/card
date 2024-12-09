@@ -97,14 +97,14 @@ function updateStatus(lanyardData) {
 	if (activities[0]?.state) {
 		elements.customStatusText.innerHTML = activities[0].state;
 	} else {
-		elements.customStatusText.innerHTML = "Not doing anything!";
+		elements.customStatusText.innerHTML = "Not Playing Anything Rate Now but you can Follow me At Twitch.tv/ZennexQ";
 	}
 
 	// Kiểm tra emoji
 	const emoji = activities[0]?.emoji;
 	if (emoji?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application_id.id}/${small_image.id}.png`;
+		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
 		elements.customStatusEmoji.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
