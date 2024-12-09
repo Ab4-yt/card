@@ -47,7 +47,6 @@ function startWebSocket() {
 function updateStatus(lanyardData) {
 	const { discord_status, activities, discord_user } = lanyardData;
 
-	elements.applicationid.innerHTML = discord_user.application_id;
 	elements.username.innerHTML = discord_user.username;
 	elements.displayName.innerHTML = discord_user.display_name
 
