@@ -98,7 +98,7 @@ function updateStatus(lanyardData) {
 	if (activities[0]?.name) {
 		elements.customStatusText.innerHTML = activities[0].name;
 	} else {
-		elements.customStatusText.innerHTML = "Not Playing Anything Rate Now ";
+		elements.customStatusText.innerHTML = "Not Playing Anything Yet 😂";
 	}
 
 	// Kiểm tra emoji
