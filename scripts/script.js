@@ -75,6 +75,16 @@ function updateStatus(lanyardData) {
 			label = "Unknown";
 			break;
 	}
+	/* Games */
+	switch (application_id) {
+		case "1005469189907173486":
+			imagePath = "https://cdn.discordapp.com/app-assets/1005469189907173486/1025422070600978553.png";
+			label = "Roblox";
+			break;
+		case "1233829658345078846":
+			imagePath = "https://cdn.discordapp.com/app-assets/1233829658345078846/1238363148214472765.png?size=160";
+			label = "Juice";
+			break;
 
 	// Kiểm tra hoạt động streaming
 	const isStreaming = activities.some(
