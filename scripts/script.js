@@ -104,7 +104,7 @@ function updateStatus(lanyardData) {
 	const emoji = activities[0]?.emoji;
 	if (emoji?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusEmoji.src = `.png`;
+		elements.customStatusEmoji.src = `Roblox`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
 		elements.customStatusEmoji.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
