@@ -114,7 +114,7 @@ function updateStatus(lanyardData) {
 	const emoji = activities[0]?.emoji;
 	if (emoji?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusEmoji.src = `https://zennexq-discord.github.io/card/public/icons/${name}.png`;
+		elements.customStatusEmoji.src = `https://zennexq-discord.github.io/card/public/icons/Roblox.png`;
 	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
 		elements.customStatusEmoji.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
