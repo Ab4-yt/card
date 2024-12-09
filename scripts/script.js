@@ -94,10 +94,16 @@ function updateStatus(lanyardData) {
 	elements.statusBox.setAttribute("aria-label", label);
 
 	// Cập nhật custom status
+	if (activities[0]?.details) {
+		elements.customStatusText.innerHTML = activities[0].details;
+	} else {
+		elements.customStatusText.innerHTML = "Not Playing Anything Rate Now ";
+	}
+	// Cập nhật custom status
 	if (activities[0]?.state) {
 		elements.customStatusText.innerHTML = activities[0].state;
 	} else {
-		elements.customStatusText.innerHTML = "Not Playing Anything Rate Now but you can Follow me At Twitch.tv/ZennexQ";
+		elements.customStatusText.innerHTML = "Not Doing Anything Rate Now ";
 	}
 
 	// Kiểm tra emoji
@@ -113,7 +119,7 @@ function updateStatus(lanyardData) {
 	}
 
 	// Hiển thị hoặc ẩn custom status
-	if (!activities[0]?.state && !emoji) {
+	if (!activities[0]?.details && !emoji) {
 		elements.customStatus.style.display = "none";
 	} else {
 		elements.customStatus.style.display = "flex";
