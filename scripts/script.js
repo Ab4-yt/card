@@ -5,7 +5,7 @@ const elements = {
 	statusImage: document.getElementById("status-image"),
 	displayName: document.querySelector(".display-name"),
 	username: document.querySelector(".username"),
-	customStatus: document.querySelector(".custom-status"),
+	customStatus: document.querySelector(".name"),
 	customStatusText: document.querySelector(".custom-status-text"),
 	customStatusEmoji: document.getElementById("custom-status-emoji"),
 };
