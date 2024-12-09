@@ -8,7 +8,6 @@ const elements = {
 	customStatus: document.querySelector(".custom-status"),
 	customStatusText: document.querySelector(".custom-status-text"),
 	customStatusEmoji: document.getElementById("custom-status-emoji"),
-	customStatusApplication: document.getElementById("application-id"),
 };
 
 // Kết nối WebSocket với Lanyard API
@@ -47,8 +46,8 @@ function startWebSocket() {
 function updateStatus(lanyardData) {
 	const { discord_status, activities, discord_user } = lanyardData;
 
+	elements.displayName.innerHTML = discord_user.display_name;
 	elements.username.innerHTML = discord_user.username;
-	elements.displayName.innerHTML = discord_user.display_name
 
 	let imagePath;
 	let label;
@@ -102,17 +101,15 @@ function updateStatus(lanyardData) {
 	}
 
 	// Kiểm tra emoji
-	const application_id = activities[0]?.application_id;
-	if (application_id?.id) {
-		const small_image = activities[0]?.small_image;
-	if (small_image?.id) {
+	const emoji = activities[0]?.emoji;
+	if (emoji?.id) {
 		// Sử dụng emoji có ID
-		elements.customStatusApplication.src = `https://cdn.discordapp.com/app-assets/${application_id.id}/${small_image.id}.png`;
-	} else if (small_text?.name) {
+		elements.customStatusEmoji.src = `https://cdn.discordapp.com/app-assets/${application_id.id}/${small_image.id}.png`;
+	} else if (emoji?.name) {
 		// Nếu không có ID, sử dụng hình ảnh mặc định
-		elements.customStatusApplication.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
+		elements.customStatusEmoji.src = "https://kirka-io-team.github.io/card/public/icons/poppy.png";
 	} else {
-		elements.customStatusApplication.style.display = "none";
+		elements.customStatusEmoji.style.display = "none";
 	}
 
 	// Hiển thị hoặc ẩn custom status
