@@ -99,12 +99,6 @@ function updateStatus(lanyardData) {
 	} else {
 		elements.customStatusText.innerHTML = "Not Playing Anything Rate Now ";
 	}
-	// Cập nhật custom status
-	if (activities[0]?.state) {
-		elements.customStatusText.innerHTML = activities[0].state;
-	} else {
-		elements.customStatusText.innerHTML = "Not Doing Anything Rate Now ";
-	}
 
 	// Kiểm tra emoji
 	const emoji = activities[0]?.emoji;
